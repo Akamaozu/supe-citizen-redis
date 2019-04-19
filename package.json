@@ -1,0 +1,20 @@
+{
+  "name": "supe-citizen-redis",
+  "version": "0.0.1",
+  "description": "Redis Connection as a Supe Citizen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "redis": "^2.8.0"
+  },
+  "peerDependencies": {
+    "cjs-task": "^2.2.0",
+    "supe": "^0.5.0",
+    "supe-addon-citizen-request": "^2.0.1",
+    "supe-addon-citizen-supervision-api": "^1.0.8"
+  }
+}
