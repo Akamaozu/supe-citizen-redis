@@ -29,8 +29,8 @@ app.step( 'setup command request handler', function(){
     var request = envelope.msg;
     if( ! 'command' in request ) return end_request( new Error( 'command to run not specified' ) );
 
-    var command = request.command.shift().toLowerCase(),
-        command_args = request.command;
+    var command = request.data.command.shift().toLowerCase(),
+        command_args = request.data.command;
 
     switch( command ){
 
