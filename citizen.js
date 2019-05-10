@@ -27,7 +27,10 @@ app.step( 'setup command request handler', function(){
 
   citizen.request.handle( 'run-command', function( envelope, end_request ){
     var request = envelope.msg;
-    if( ! 'command' in request ) return end_request( new Error( 'command to run not specified' ) );
+
+    if( ! request.data.hasOwnProperty( 'command' ) ) return end_request( new Error( 'command to run not specified' ) );
+    if( Object.prototype.toString.call( request.data.command ) !== '[object Array]' ) return end_request( new Error( 'unexpected command datatype' ) );
+    if( request.data.command.length < 1 ) return end_request( new Error( 'command array is empty' ) );
 
     var command = request.data.command.shift().toLowerCase(),
         command_args = request.data.command;
