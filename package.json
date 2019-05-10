@@ -1,6 +1,6 @@
 {
   "name": "supe-citizen-redis",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Redis Connection as a Supe Citizen",
   "main": "index.js",
   "scripts": {
