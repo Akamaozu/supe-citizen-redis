@@ -10,7 +10,7 @@ module.exports = function( task, config ){
   task.step( 'start redis citizen', function(){
     var citizen = task.get( 'citizen' );
 
-    citizen.supervisor.start( redis_citizen_name, path_to_redis_citizen, function( error ){
+    citizen.supervisor.start( redis_citizen_name, path_to_redis_citizen, config, function( error ){
       if( error ) return task.end( error );
       else task.next();
     });
