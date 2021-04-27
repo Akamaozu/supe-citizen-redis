@@ -9,7 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "redis": "^2.8.0"
+    "redis": "^3.1.1"
   },
   "peerDependencies": {
     "cjs-task": "^2.2.0",
